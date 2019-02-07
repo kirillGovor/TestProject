@@ -1,0 +1,79 @@
+body{
+    margin:0;
+    padding:0;
+}
+.header{
+    margin: 0;
+    padding: 0;
+
+}
+.base{
+    background-image: url("../images/Base.png");
+    width: 300px;
+    height: 220px;
+    position: absolute;
+    background-size:cover;
+    left: 0;
+    top: 0;
+}
+.button_on_off{
+    background-image: url("../images/Button_on.png");
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-size:cover;
+    left: 240px;
+    top: 30px;
+}
+.button_off{
+    background-image: url("../images/Button_off.png");
+    position: absolute;
+    width: 50px;
+    height: 60px;
+    background-size:cover;
+    left: 0;
+    top: 0;
+    left: 240px;
+    top: 90px;
+}
+.pickup{
+    background-image: url("../images/3.png");
+    position: absolute;
+     width: 35px;
+    height: 150px;
+    background-size:cover;
+    left: 195px;
+    top: 0;
+    
+   
+}
+.disk{
+    background-image: url("../images/1.png");
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-size:cover;
+    left: 8px;
+    top: 11px;
+  
+}
+.disk_div{
+    width: 200px;
+    height: 200px;
+}
+.playlist{
+    margin-top:250px;
+}
+
+.tracks p {
+    font-size: 20px;
+}
+.imageTrack{
+display: float;
+width: 30px;
+height: 30px;
+}
+
+.playing_bar{
+    background-color:gray;
+}
