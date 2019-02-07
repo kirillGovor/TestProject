@@ -42,8 +42,10 @@ body{
      width: 35px;
     height: 150px;
     background-size:cover;
-    left: 195px;
+    left: 205px;
     top: 0;
+    transform-origin: center top;
+    transition: 0.3s;
     
    
 }
@@ -74,6 +76,7 @@ width: 30px;
 height: 30px;
 }
 
-.playing_bar{
-    background-color:gray;
+.Track1:focus{
+    background-color: blue;
+    color:white;
 }

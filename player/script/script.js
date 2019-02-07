@@ -1,7 +1,7 @@
 "use strict";
 var transform = document.getElementById("disk");
 console.log(transform);
-
+var numberTrack=1;
 
 
 
@@ -22,7 +22,7 @@ function play_music(number) {
         if (!audio.paused) {
             var disc = document.getElementById("button_on_off");
             disc.style.backgroundImage = "url(images/Button_on_transform.png)";
-            pickup.style.transform = "rotate(35deg)";
+            pickup.style.transform = "rotate(20deg)";
             var timerId = setInterval(function () {
 
 
@@ -35,6 +35,8 @@ function play_music(number) {
                 }
                 rotate = rotate + 10;
                 transform.style.transform = " rotate(" + rotate + "deg)";
+
+             
 
             }, 50);
         }
@@ -49,17 +51,16 @@ function play_music(number) {
     }
 };
 
-function stop_music(number) {
-    if (number == 1) {
+
+function next_music() {
+    if (numberTrack == 1) {
         var sound = document.getElementById("Track1");
         sound.stop();
-
     }
 }
 
-function next_music() {
-    if (number == 1) {
-        var sound = document.getElementById("Track1");
-        sound.stop();
-    }
+function focusFunction(){
+
+    var traks = document.getSelection("source");
+    console.log(traks.selectAllChildren);
 }
