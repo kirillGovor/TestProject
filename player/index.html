@@ -17,58 +17,73 @@
     <content>
         <h1 class="playlist">Плейлист:</h1>
         <h1>player</h1>
-<div class="tracks">
-        <div class="Track1" onclick="focusFunction()">
-            <p>Saw Her_Standing_There.ogg</p>
+        <div class="tracks">
+            <div class="Track1" onclick="focusFunction(0)" id="musicBlock">
 
-            <div class="playing_bar">
-                    <img  class="imageTrack"src="images/play.gif" onclick="play_music(1)" alt='start play'>
-                    <img  class="imageTrack" src="images/pause.gif" alt="Pause">
-                    <img  class="imageTrack" src="images/stop.gif" alt="stop_Playing">
-                    <img  class="imageTrack" src="images/play_left.gif" alt="play_left">
-                    <img  class="imageTrack" src="images/play_right.gif" alt="play_right">
+
+                <div class="playing_bar" data-value="music/Track1.mp3" id="playing_bar1">
+                    <p>Saw Her_Standing_There.ogg</p>
+                    <img class="imageTrack" src="images/play.gif" onclick="play_music()" alt='start play'>
+                    <img class="imageTrack" src="images/pause.gif" alt="Pause">
+                    <img class="imageTrack" src="images/stop.gif" alt="stop_Playing">
+                    <img class="imageTrack" src="images/play_left.gif" alt="play_left">
+                    <img class="imageTrack" src="images/play_right.gif" alt="play_right">
+
                 </div>
+            </div>
+
+            <div>
+                <div class="playing_bar" onclick="focusFunction(1)">
+                    <p onclick="StopTrack()">Track2</p>
+                    <img class="imageTrack" src="images/play.gif" onclick="play_music()" alt='start play'>
+                    <img class="imageTrack" src="images/pause.gif" alt="Pause">
+                    <img class="imageTrack" src="images/stop.gif" alt="stop_Playing">
+                    <img class="imageTrack" src="images/play_left.gif" alt="play_left">
+                    <img class="imageTrack" src="images/play_right.gif" alt="play_right">
+                </div>
+            </div>
+
+            <div class="playing_bar" onclick="focusFunction(2)">
+                <p>Track3</p>
+                <img class="imageTrack" src="images/play.gif" onclick="play_music()" alt='start play'>
+                <img class="imageTrack" src="images/pause.gif" alt="Pause">
+                <img class="imageTrack" src="images/stop.gif" alt="stop_Playing">
+                <img class="imageTrack" src="images/play_left.gif" alt="play_left">
+                <img class="imageTrack" src="images/play_right.gif" alt="play_right">
+            </div>
+        </div>
         </div>
 
-        <div>
-            <p>Track2</p>
-            <div class="playing_bar">
-                    <img  class="imageTrack"src="images/play.gif" onclick="play_music(1)" alt='start play'>
-                    <img  class="imageTrack" src="images/pause.gif" alt="Pause">
-                    <img  class="imageTrack" src="images/stop.gif" alt="stop_Playing">
-                    <img  class="imageTrack" src="images/play_left.gif" alt="play_left">
-                    <img  class="imageTrack" src="images/play_right.gif" alt="play_right">
-                </div>
-        </div>
-            <p>Track3</p>
-            <div class="playing_bar">
-                    <img  class="imageTrack"src="images/play.gif" onclick="play_music(1)" alt='start play'>
-                    <img  class="imageTrack" src="images/pause.gif" alt="Pause">
-                    <img  class="imageTrack" src="images/stop.gif" alt="stop_Playing">
-                    <img  class="imageTrack" src="images/play_left.gif" alt="play_left">
-                    <img  class="imageTrack" src="images/play_right.gif" alt="play_right">
-                </div>
-        </div>
-    </div>
-     
     </content>
     <div class="disk_div">
         <div class="base"></div>
-        <div class="button_on_off" onclick=play_music(1) id="button_on_off"></div>
+        <div class="button_on_off" onclick=play_music() id="button_on_off"></div>
         <div class="button_volume"></div>
         <div id="disk with text">
             <p id="text_sound"> </p>
             <div class="disk" id="disk"></div>
         </div>
         <div class="pickup" id="pickup"></div>
-
+      
 
     </div>
 
     <audio id=Track1>
-        <source src="music/Saw Her_Standing_There.ogg"> </audio> <audio id="Track1">
-        <source src="music/Track1.mp3">
+        <source src="music/Saw Her_Standing_There.ogg" id="Tracks">
     </audio>
-  
+
+    <audio id="Track2">
+        <source src="music/Anna (Go To Him).ogg" id="Tracks2">
+    </audio>
+
+    <audio  id="Track3">
+        <source  src="music/Misery.ogg" id="Tracks3">
+    </audio>
+
+    <audio id="Track4">
+        <source src="music/Track1.mp3" id="Tracks4">
+    </audio>
+
+    <span id="tracktime">0 / 0</span>
 
 </body>

@@ -80,3 +80,25 @@ height: 30px;
     background-color: blue;
     color:white;
 }
+.playing_bar{
+transition: 0.3s;
+}
+.playing_bar:hover{
+    background-color: blue;
+    color:white;
+}
+svg{
+    position: absolute;
+    top: 0;
+    fill: white;
+}
+#tracktime{
+    position: absolute;
+    left:180px;
+    top:190px;
+    color:whitesmoke;
+  
+    width: 115px;
+    box-shadow:
+    0 1px 4px rgba(0, 0, 0, .9), -23px 0 20px -23px rgba(0, 0, 0, .9), 23px 0 20px -23px rgba(0, 0, 0, .9), 0 0 40px rgba(0, 0, 0, .2) inset;
+}
