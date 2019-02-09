@@ -15,9 +15,24 @@
 
     </header>
     <content>
-        <h1 class="playlist">Плейлист:</h1>
-        <h1>player</h1>
+        
+        <div class="newDesignDisk">
+
+            <img class="vinilPlayer" src="images/vinilPlayer1.jpg">
+            <img class="NewDisk" id="disk" src="images/1Mistery.png">
+            <img class="newPicup" id="pickup" src="images/new_3.png">
+            <span id="tracktime">0 / 0</span>
+            <button onclick="play_music()" id="button_on_off">
+                включить/выключить
+            </button>
+
+        </div>
+
+
+
+
         <div class="tracks">
+            <h1 class="playlist">Плейлист:</h1>
             <div class="Track1" onclick="focusFunction(0)" id="musicBlock">
 
 
@@ -52,21 +67,10 @@
                 <img class="imageTrack" src="images/play_right.gif" alt="play_right">
             </div>
         </div>
-        </div>
+        
 
     </content>
-    <div class="disk_div">
-        <div class="base"></div>
-        <div class="button_on_off" onclick=play_music() id="button_on_off"></div>
-        <div class="button_volume"></div>
-        <div id="disk with text">
-            <p id="text_sound"> </p>
-            <div class="disk" id="disk"></div>
-        </div>
-        <div class="pickup" id="pickup"></div>
-      
 
-    </div>
 
     <audio id=Track1>
         <source src="music/Saw Her_Standing_There.ogg" id="Tracks">
@@ -76,14 +80,14 @@
         <source src="music/Anna (Go To Him).ogg" id="Tracks2">
     </audio>
 
-    <audio  id="Track3">
-        <source  src="music/Misery.ogg" id="Tracks3">
+    <audio id="Track3">
+        <source src="music/Misery.ogg" id="Tracks3">
     </audio>
 
     <audio id="Track4">
         <source src="music/Track1.mp3" id="Tracks4">
     </audio>
 
-    <span id="tracktime">0 / 0</span>
+
 
 </body>

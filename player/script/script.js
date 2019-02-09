@@ -42,9 +42,7 @@ function play_music() {
             audios[i].pause;
         }
 
-        var button_on_off = document.getElementById("button_on_off");
-        button_on_off.style.transform = "rotate(180deg)";
-        pickup.style.transform = "rotate(20deg)";
+        pickup.style.transform = "rotate(0deg)";
 
         timerId = setInterval(function () {
             var tracktime = document.getElementById("tracktime");
@@ -66,11 +64,9 @@ function play_music() {
 
     else if (audios[number].played) {
         console.log("stoped")
-        var button_on_off = document.getElementById("button_on_off");
-        button_on_off.style.transform = "rotate(0deg)";
         clearInterval(timerId);
         StopTimer = StopTimer + 1;
-        pickup.style.transform = "rotate(0deg)";
+        pickup.style.transform = "rotate(-20deg)";
     }
 };
 
@@ -89,7 +85,7 @@ function focusFunction(numberTrack) {
 
         case 0:
 
-            transformDisk.style.backgroundImage = "url('images/1Saw_Her_Standing_There.png')";
+            transformDisk.src = 'images/1Saw_Her_Standing_There.png';
             StopTrack();
             number = 0;
             audios[0].currentTime = 0;
@@ -97,7 +93,7 @@ function focusFunction(numberTrack) {
 
         case 1:
 
-            transformDisk.style.backgroundImage = "url('images/1Anna_Go_To_Him.png')";
+            transformDisk.src = 'images/1Anna_Go_To_Him.png';
             StopTrack();
             number = 1;
             audios[1].currentTime = 0;
@@ -105,14 +101,14 @@ function focusFunction(numberTrack) {
 
         case 2:
 
-            transformDisk.style.backgroundImage = "url('images/1Mistery.png')";
+            transformDisk.src = 'images/1Mistery.png';
             StopTrack();
             number = 2;
             audios[2].currentTime = 0;
             break;
         case 3:
 
-            transformDisk.style.backgroundImage = "url('images/1.png')";
+            transformDisk.src = "images/1.png";
             number = 2;
             audios[3].currentTime = 0;
             break;
@@ -120,12 +116,9 @@ function focusFunction(numberTrack) {
 
 }
 function StopTrack() {
-
-    var disc = document.getElementById("button_on_off");
-    disc.style.backgroundImage = "url(images/Button_on.png)"
     clearInterval(timerId)
     StopTimer = StopTimer + 1;
-    pickup.style.transform = "rotate(0deg)";
+    pickup.style.transform = "rotate(-20deg)";
 }
 
 function timeAudio(seconds) {
@@ -135,4 +128,41 @@ function timeAudio(seconds) {
     //var mseconds = (audios[number].currentTime % 60) / 1000;
     var total = hours + " : " + minutes + " : " + second;
     return (total)
+}
+
+
+function button_volume(EO) {
+
+    EO.onmousedown = function (EO) {
+        EO = EO || window.event;
+        draggedImage = EO.target;
+        var coords = getCoords(draggedImage);
+        var shiftX = EO.pageX - coords.left;
+        var shiftY = EO.pageY - coords.top;
+
+        z_index_image = z_index_image + 1;
+        draggedImage.style.zIndex = z_index_image;
+        moveAt(EO);
+        function moveAt(EO) {
+            draggedImage.style.left = EO.pageX - shiftX + 'px';
+            draggedImage.style.top = EO.pageY - shiftY + 'px';
+        }
+        document.onmousemove = function (EO) {
+            moveAt(EO);
+        };
+
+        draggedImage.onmouseup = function (EO) {
+            document.onmousemove = null;
+            draggedImage.onmouseup = null;
+            draggedImage = null;
+        };
+        EO.preventDefault();
+    }
+    function getCoords(EO) {
+        var box = EO.getBoundingClientRect();
+        return {
+            top: box.top + pageYOffset,
+            left: box.left + pageXOffset
+        };
+    }
 }
