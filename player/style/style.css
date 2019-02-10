@@ -18,22 +18,11 @@ body{
 }
 #button_on_off{
     position: absolute;
-    left: 20%;
+    left: 20.5%;
     top: 87%;
     width: 15%;
     height: 3%;
     font-size: 1vw;
-}
-.button_off{
-    background-image: url("../images/Button_off.png");
-    position: absolute;
-    width: 50px;
-    height: 60px;
-    background-size:cover;
-    left: 0;
-    top: 0;
-    left: 240px;
-    top: 90px;
 }
 .pickup{
     background-image: url("../images/3.png");
@@ -64,12 +53,15 @@ body{
 }
 
 .tracks{
-    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    
+    background: url("../images/Note.png") no-repeat;
+    background-size: contain;
+    width: 50%;
+    margin: auto;
+    height: 800px;
 }
 .tracks p {
-    font-size: 20px;
+    font-size: 2vw;
 }
 .imageTrack{
 display: float;
@@ -83,11 +75,19 @@ height: 30px;
 }
 .playing_bar{
 transition: 0.3s;
-border: solid 0.1px #e2d4c0;
+margin-left: 10%;
+margin-right: 10%;
+border: solid 1px transparent;
+font-size: 1vw;
+margin-bottom: 10%;
 }
 .playing_bar:hover{
-    background-color: burlywood;
-    color:white;
+    border: solid 1px  black;
+    
+}
+.playlist{
+    margin-left: 10%;
+    margin-top:10px;
 }
 svg{
     position: absolute;
@@ -159,3 +159,74 @@ svg{
         width: 17%;
         box-shadow: 0 1px 4px rgba(0, 0, 0, .9), -23px 0 20px -23px rgba(0, 0, 0, .9), 23px 0 20px -23px rgba(0, 0, 0, .9), 0 0 40px rgba(0, 0, 0, .2) inset;
     }
+#rangeVolume{
+    position: absolute;
+    left: 78%;
+    top: 88.5%;
+    width: 5%;
+}
+.volumeText{
+    position: absolute;
+    left: 78.3%;
+    top: 85.6%;
+    font-size: 1vw;
+}
+
+.speed_music_0{
+    position: absolute;
+    left: 16.4%;
+    top: 88.5%;
+    width: 2.4%;
+    text-align: center;
+    font-size: 1vw;
+    height: 2%;
+}
+.speed_music_45{
+    position: absolute;
+    left: 15.3%;
+    top: 86.1%;
+    width: 2.4%;
+    text-align: center;
+    font-size: 1vw;
+    height: 2%;
+}
+
+
+.speed_music_75{
+    position: absolute;
+    left: 17.7%;
+    top: 86.1%;
+    width: 2.4%;
+    font-size: 1vw;
+    height: 2%;
+}
+.content{
+    background:url("../images/fon.jpg")
+}
+.fon{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: url(../images/fon.jpg);
+}
+
+
+  @media (min-width: 1200px) {
+    .tracks{
+    background: url(../images/Note.png) no-repeat;
+    background-size: contain;
+    width: 40%;
+    margin: auto;
+    height: 800px;
+}
+  }
+
+  @media (min-width: 1400px) {
+    .tracks{
+    background: url(../images/Note.png) no-repeat;
+    background-size: contain;
+    width: 30%;
+    margin: auto;
+    height: 800px;
+}
+  }

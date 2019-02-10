@@ -11,38 +11,49 @@
 </head>
 
 <body>
+    <div class="fon">
     <header class="header">
 
     </header>
-    <content>
-        
+    <content class="content">
+
         <div class="newDesignDisk">
 
             <img class="vinilPlayer" src="images/vinilPlayer1.jpg">
-            <img class="NewDisk" id="disk" src="images/1Mistery.png">
+            <img class="NewDisk" id="disk" src="images/1Saw_Her_Standing_There.png">
             <img class="newPicup" id="pickup" src="images/new_3.png">
             <span id="tracktime">0 / 0</span>
             <button onclick="play_music()" id="button_on_off">
                 включить/выключить
             </button>
+            <p class="volumeText">звук</p>
+            <input name="rangeVolume" id="rangeVolume" class="rangeVolume" oninput="inputVolume()" min="0" max="100"
+                value="100" type="range">
 
+            <button class="speed_music_0" onclick="speed_music(0)">
+                0
+            </button>
+            <button class="speed_music_45" onclick="speed_music(45)">
+                45
+            </button>
+            <button class="speed_music_75" onclick="speed_music(75)">
+                75
+            </button>
         </div>
 
 
 
 
         <div class="tracks">
+            <br>
             <h1 class="playlist">Плейлист:</h1>
             <div class="Track1" onclick="focusFunction(0)" id="musicBlock">
 
 
                 <div class="playing_bar" data-value="music/Track1.mp3" id="playing_bar1">
                     <p>Saw Her_Standing_There.ogg</p>
-                    <img class="imageTrack" src="images/play.gif" onclick="play_music()" alt='start play'>
-                    <img class="imageTrack" src="images/pause.gif" alt="Pause">
-                    <img class="imageTrack" src="images/stop.gif" alt="stop_Playing">
-                    <img class="imageTrack" src="images/play_left.gif" alt="play_left">
-                    <img class="imageTrack" src="images/play_right.gif" alt="play_right">
+                  
+                    
 
                 </div>
             </div>
@@ -50,24 +61,20 @@
             <div>
                 <div class="playing_bar" onclick="focusFunction(1)">
                     <p onclick="StopTrack()">Track2</p>
-                    <img class="imageTrack" src="images/play.gif" onclick="play_music()" alt='start play'>
-                    <img class="imageTrack" src="images/pause.gif" alt="Pause">
-                    <img class="imageTrack" src="images/stop.gif" alt="stop_Playing">
-                    <img class="imageTrack" src="images/play_left.gif" alt="play_left">
-                    <img class="imageTrack" src="images/play_right.gif" alt="play_right">
+                   
+                   
+                 
                 </div>
             </div>
 
             <div class="playing_bar" onclick="focusFunction(2)">
                 <p>Track3</p>
-                <img class="imageTrack" src="images/play.gif" onclick="play_music()" alt='start play'>
-                <img class="imageTrack" src="images/pause.gif" alt="Pause">
-                <img class="imageTrack" src="images/stop.gif" alt="stop_Playing">
-                <img class="imageTrack" src="images/play_left.gif" alt="play_left">
-                <img class="imageTrack" src="images/play_right.gif" alt="play_right">
+               
+                
+            
             </div>
         </div>
-        
+
 
     </content>
 
@@ -89,5 +96,5 @@
     </audio>
 
 
-
+</div>
 </body>
